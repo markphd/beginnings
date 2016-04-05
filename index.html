@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+ 
+<html lang="en">
+<head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <title>Sabrina Artadi</title>
+            <meta name="copyright" content="2011, Sabrina Artadi">
+            <meta name="author" content="Mark Dawal">
+            <meta name="keywords" content="Sabrina's Kitchen, Sabrina Artadi, Marrakesh Collection, quick recipes, easy, delicious, recipes, Basti Artadi">
+              <link rel="stylesheet" href="css/styles.css" type="text/css">
+            <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection">
+            <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+            <link rel="stylesheet" href="plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+            <link rel="stylesheet" href="src/typography.css" type="text/css" media="print">
+ 			<link rel="stylesheet" href="css/gallery.css" type="text/css">
+            <script src="script/jquery-1.6.2.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {		
+	
+	//Execute the slideShow
+	slideShow();
+
+});
+
+function slideShow() {
+
+	//Set the opacity of all images to 0
+	$('#gallery a').css({opacity: 0.0});
+	
+	//Get the first image and display it (set it to full opacity)
+	$('#gallery a:first').css({opacity: 1.0});
+	
+	//Set the caption background to semi-transparent
+	$('#gallery .caption').css({opacity: 0.7});
+
+	//Resize the width of the caption according to the image width
+	$('#gallery .caption').css({width: $('#gallery a').find('img').css('width')});
+	
+	//Get the caption of the first image from REL attribute and display it
+	$('#gallery .content').html($('#gallery a:first').find('img').attr('rel'))
+	.animate({opacity: 0.7}, 400);
+	
+	//Call the gallery function to run the slideshow, 6000 = change to next image after 6 seconds
+	setInterval('gallery()',8000);
+	
+}
+
+function gallery() {
+	
+	//if no IMGs have the show class, grab the first image
+	var current = ($('#gallery a.show')?  $('#gallery a.show') : $('#gallery a:first'));
+
+	//Get next image, if it reached the end of the slideshow, rotate it back to the first image
+	var next = ((current.next().length) ? ((current.next().hasClass('caption'))? $('#gallery a:first') :current.next()) : $('#gallery a:first'));	
+	
+	//Get next image caption
+	var caption = next.find('img').attr('rel');	
+	
+	//Set the fade in effect for the next image, show class has higher z-index
+	next.css({opacity: 0.0})
+	.addClass('show')
+	.animate({opacity: 1.0}, 1000);
+
+	//Hide the current image
+	current.animate({opacity: 0.0}, 1000)
+	.removeClass('show');
+	
+	//Set the opacity to 0 and height to 1px
+	$('#gallery .caption').animate({opacity: 0.0}, { queue:false, duration:0 }).animate({height: '1px'}, { queue:true, duration:300 });	
+	
+	//Animate the caption, opacity to 0.7 and heigth to 100px, a slide up effect
+	$('#gallery .caption').animate({opacity: 0.7},100 ).animate({height: '50px'},500 );
+	
+	//Display the content
+	$('#gallery .content').html(caption);
+	
+	
+}
+
+</script>
+
+ 
+ 
+              <!--[if IE 8]>
+                <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+              <![endif]-->
+</head>
+<body>
+ 			
+            <div id="main" class="container">
+                        <div id="head" class="span-24">
+                                    <img src="images/sabrina_head.png"/>
+                
+                        </div>
+                       
+                        <div id="nav" class="span-24">
+                                    <ul>
+                                                <li><a href="index.html">HOME</a></li>
+                                                <li><a href="sk.html">SABRINA'S KITCHEN</a></li>
+                                                <li><a href="recipes.html">RECIPES</a></li>
+                                                <li><a href="mc.html">MARRAKESH COLLECTION</a></li>
+                                                <li><a href="press.html">PRESS</a></li>
+                                 				
+                                    </ul>
+                                    
+                        </div>
+                        						<img class="side" src="images/ppinoy.png"/>
+                        <div id="content" class="span-24">
+                       
+                                    <div id="preview" class="span-12 prepend-top">
+                                               
+                                                <h3 class="large">A PEEK INSIDE SABRINA'S KITCHEN</h3>
+                                                <div id="mediaplayer">Click video to play.</div>
+	
+													<script type="text/javascript" src="jwplayer.js"></script>
+													<script type="text/javascript">
+														jwplayer("mediaplayer").setup({
+															flashplayer: "player.swf",
+															file: "skpreview.mp4",
+															image: "preview.png",
+															width: 470
+														});
+													</script>
+                                                           
+                                                <p class="title">SEASON 2 COMING VERY SOOON!</p>
+                                            
+                                                <p>Catch one of Manila's most spirited food and entertaining enthusiasts, Sabrina Artadi as she opens the doors and invites you into her very own kitchen!</p>
+ 
+                                   
+                                
+
+									<div id="soundtrack" class="span-6 border">  
+										<h3 class="large">Sabrina's Kitchen Theme Song</h3>
+										
+                                        <script language="JavaScript" src="script/audio-player.js"></script>
+<object type="application/x-shockwave-flash" data="script/player.swf" id="audioplayer1" height="24" width="230">
+<param name="movie" value="script/player.swf">
+<param name="FlashVars" value="playerID=audioplayer1&soundFile=sktheme.mp3">
+<param name="quality" value="high">
+<param name="menu" value="false">
+<param name="wmode" value="transparent">
+</object>
+<p>Written and performed by Basti Artadi</p>
+                                    </div>
+                                    
+                                    <div id="new" class="span-6 last">	
+			  		<h3 class="large">What's new with Bina?</h3>
+			  		<a href="http://www.facebook.com/officialsabrinaskitchen"><img src="images/facebook.png"/></a><p>Like Sabrina on Facebook</p>
+			  		<a href="http://twitter.com/#!/SabrinasKitchen"><img src="images/twitter.png"/></a><p>Follow Sabrina on Twitter</p>
+			  		<!--
+<p class="title">Like SK?</p>
+			  		<p class="desc">Follow her on Twitter!</p>
+-->
+			  		
+		  							</div>
+                                    
+	
+
+                                   </div> 
+                                    <div class="span-6 prepend-top border">    
+	                                   <h3 class="large">DETOUR TO DELISH</h3>
+	                                <div id="gallery" class="span-6">
+
+											<a href="lambtajine.html" class="show">
+												<img src="images/lambtajine.jpg" alt="MOROCCAN LAMB TAJINE" width="230" height="129" title="MOROCCAN LAMB TAJINE" rel="LAMB TAJINE"/>
+											</a>
+											
+											<a href="asparagus.html">
+												<img src="images/food_6.jpg" alt="ASPARAGUS WITH JAMON SERRANO AND SUN-DRIED TOMATOES" width="230" height="164" title="ASPARAGUS WITH JAMON SERRANO AND SUN-DRIED TOMATOES" rel="ASPARAGUS WITH JAMON SERRANO AND SUN-DRIED TOMATOES"/>
+											</a>
+											
+											<a href="mamonbites.html">
+												<img src="images/food_3.jpg" alt="MAMON BITES WITH STRAWBERRY AND CHOCOLATE SAUCE" width="230" height="164" title="" rel="MAMON BITES WITH STRAWBERRY AND CHOCOLATE SAUCE"/>
+											</a>
+											
+									<div class="caption"><div class="content"></div></div>
+									
+									
+									</div>
+									<div class="clear"></div>
+                                    <p>Easy, inexpensive Mediterranean-inspired dishes that'll surely make every member of the family happy!</p><p><a href="recipes.html">View all recipes</a></p>
+								
+        						
+        							
+        							<div class="span-6">
+        							        						
+        	<h3 class="large">Sabrina's Fab Faves!</h3>						
+			<a href="http://www.mccormick.com.ph/" target=”_blank”><img src="images/mcad.jpg" class="pic"></a>
+			<p>McCormick spices are absolute musts for great gourmet food and health!</p>
+
+			
+			
+			</div>
+			</div>
+		
+                                    <div class="span-6 prepend-top last">
+                       					
+                                        <h3 class="large">THE MARRAKESH COLLECTION</h3>
+                                        <a href="mc.html"><img src="images/marrakesh.jpg"></a>
+                                        <p>Outfit seen on Sabrina's Kitchen may be ordered through Marrakesh Collection.
+                                        </p>
+                                        <p>
+                                        All collection
+                                        <a href="mc.html"> Click here</a></p>
+                       
+                 						<p>ORDER 5 pcs or more and GET 10% DISCOUNT!</p>
+                                    
+                                    
+                                   
+ </div>
+          
+                        </div>
+                        <div class="span-24"><img src="images/footer6.jpg"/></div>
+ 
+                        <div id="footer" class="span-24">
+                        <p class="alt">
+                        &copy; 2011 Sabrina Artadi. All rights reserved.</p>
+                        </div>
+ 
+                       
+                        </div>
+                        
+</div>
+
+
+           
+</body>
+</html>

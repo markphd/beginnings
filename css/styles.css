@@ -1,0 +1,219 @@
+
+
+#content a{
+ 	color:green;text-decoration:underline;
+}
+
+
+#nav {
+	float: left;
+	padding: 0 0 3px 0;
+	background: #7bad0e;
+	margin-top: -4px;
+	font-size: 1.2em;
+}
+
+#nav li{
+	display: block;
+	float: left;
+	margin: 5px 0 1px;
+	padding-right: 30px;
+	padding-left: 20px;	
+}
+
+#nav li a{
+	padding: 5px 3px;	
+	color: #e4fa97;
+	text-decoration: none;	
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+#nav li a:hover, #nav li a:focus {
+	color: #fff;
+	background: rgba(0,0,0,0.15);
+}
+
+#firstcol p{
+	font-size: 150%;
+}
+
+.header{
+	text-align: center;
+	font-size: 1.2em;
+	margin-top: 1px;
+	color: white;
+}
+
+.video{
+	left-padding: 1px;	
+}
+
+#leftcol {
+	float: left;
+	font-size: 1em;
+		
+}
+
+#leftcol li{
+	display: block;
+	margin: 0px;
+	text-align: center;	
+	background: #7bad0e;
+	padding: 5px;
+}
+
+#leftcol li a{	
+	color: #e4fa97;
+	font-size:1em;
+	text-decoration: none;
+	
+}
+
+#leftcol li a:hover, #leftcol li a:focus {
+	color: #fff;
+	background: rgba(0,0,0,0.15);
+}
+
+
+#centercol{
+/* 	background: #f5ffef; */
+}
+
+#rightcol{
+	background: url('images/sab_kit2.png');
+}
+
+#sponsors{
+	margin-top: -25px;
+}
+
+#sponsors img{
+	float: left;
+	padding-left: 10px;
+	padding-bottom: 15px;
+	margin-top: -20px;
+}
+
+
+#new p{
+	padding-top: 5px;
+	
+}
+
+#new img{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.lfranco {
+	text-align: left;
+}
+.center{
+	text-align: left;
+}
+
+.fsent{
+	text-indent: 17px;
+	font-size: 22px;
+	line-height: 18px;
+}
+
+.episode{
+	line-height: 12px;
+}
+
+.logo {
+	padding-left: 10px;
+	padding-bottom: 5px;	
+}
+
+.side {
+	position: absolute; left: 10px;
+}
+.title{
+	padding-top: 15px;
+	font-size: 17px;
+	line-height: 1px;
+}
+
+.date{
+	text-align: right;
+	font-size: smaller;
+	padding-left: 40px;
+	color: gray;
+}
+
+.desc{
+	font-size: 14px;
+	line-height: 1.5em;
+	padding-bottom: 7px;
+}
+
+#new img{
+	padding-top: -1px;
+	float: left;
+}
+
+#new h4{
+	margin-top: 6px;
+	float: left;
+}
+
+
+#content .post {
+	background: #FFF;
+	margin-bottom: 25px;
+	margin-top: 15px;
+}
+
+
+#content .post h3 h4{
+	margin: 0;
+	color: gray;
+	text-align: left;
+}
+
+
+.pic{
+	margin-bottom: 15px;
+	float: left;
+}
+
+.press{
+	margin-right: 0;
+}
+
+
+#footer {
+	clear: left;
+	padding: 10px 0 30px;
+	min-height: 0;
+	color: #8a867c;
+	font-size: 10px;
+	text-align: center;
+/* 	background: url(images/bg-footer.gif) no-repeat scroll center top transparent; */
+	}	
+
+#footer p {
+	padding-bottom: 8px;
+	}
+
+#footer-links { 
+	margin-bottom: 10px;
+	}
+
+#footer-links a {
+	padding: 0 10px;
+	}
+
+#footer #cameronmoll {
+	margin: 20px auto 0;
+	width: 124px;
+	}
+
+
+
+
